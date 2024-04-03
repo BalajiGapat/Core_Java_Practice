@@ -9,10 +9,11 @@ public class ProducerConsumer
 	{
 		Object key=new Object();
 		Queue<Integer> queue=new LinkedList<>(); // common buffer
-		int plateSize=10;
+		int plateSize=5;
 		
 		// producer thread
-		Thread producer=new Thread(new Runnable() {
+		Thread producer=new Thread(new Runnable() 
+		{
 			@Override
 			public void run() 
 			{
@@ -53,9 +54,9 @@ public class ProducerConsumer
 					{
 						while(queue.size()==0)
 							key.wait(); // red signal
-						queue.poll();
 						
-						Thread.sleep(800); // time required to consume MOMO
+						queue.poll();
+						Thread.sleep(1000); // time required to consume MOMO
 						System.out.println("MOMO consumed, plate size: "+queue.size());
 						key.notify(); // green signal
 					} 

@@ -29,25 +29,32 @@ public class Restaurant  // driver code
 				Kitchen.prepareFood();
 			}
 		}, "chef-4" );
-		t1.start();
+		
 		
 		
 		Thread t2=new Thread( ()->{
 			System.out.println("Order taken by: "+Thread.currentThread().getName());
 			Kitchen.prepareFood();
 		}, "chef-2" );
-		t2.start();
+		
 		
 		Thread t3=new Thread( ()->{
 			System.out.println("Order taken by: "+Thread.currentThread().getName());
 			Kitchen.prepareFood();
 		}, "chef-3" );
-		t3.start();
+		
 		
 		Thread t4=new Thread( ()->{
 			System.out.println("Order taken by: "+Thread.currentThread().getName());
 			Kitchen.prepareFood();
 		}, "chef-1" );
+		
+		
+		
+		
+		t1.start();
+		t2.start();
+		t3.start();
 		t4.start();
 		
 	}
