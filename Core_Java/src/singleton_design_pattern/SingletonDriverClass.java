@@ -10,10 +10,12 @@ class Singleton
 
     // Private static instance variable
     private static Singleton stud;
+    
 
     // Private constructor
     private Singleton() 
     {
+    	
     }
 
     // Static method to get the singleton instance
@@ -52,7 +54,9 @@ public class SingletonDriverClass
 	public static void main(String[] args) 
 	{
 		Singleton stud= Singleton.getStud();
-		System.out.println(stud);
+		Singleton stud2= Singleton.getStud();
+		System.out.println("stud:  "+stud.hashCode());
+		System.out.println("stud2: "+stud2.hashCode());
 		
 		stud.setStud(123, "balaji", "pune", 9876543210L);
 		System.out.println(stud);

@@ -12,22 +12,24 @@ import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.verify;
 
 @ExtendWith(MockitoExtension.class)
-class PersonServiceTest {
-
+class PersonServiceTest
+{
     @Mock
     private PersonRepo personRepo;
-
 
     private PersonService personService;
 
     @BeforeEach
-    void setUp() {
+    void setUp() 
+    {
         this.personService = new PersonService(this.personRepo);
     }
 
     @Test
-    void getAllPerson() {
+    void getAllPerson() 
+    {
         personService.getAllPerson();
         verify(personRepo).findAll();
     }
+    
 }
