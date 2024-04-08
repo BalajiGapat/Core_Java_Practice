@@ -53,5 +53,7 @@ public class Main
         HR hr2=new HR("Akash", 123, 45000, "Sales", 5000);
         hr2.print(); // upcasting => child class reference can access parent class property
         hr2.display();
+
+        System.out.println("last line...");
     }
 }
